@@ -1,1 +1,24 @@
+import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+public class main {
+
+	public static void 460(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		String a;
+		int c, dobro;
+	        
+	    for(c=1; c<=3; c++){
+	    	 System.out.println("Digite numero: ");
+	    	 a = scan.nextLine();
+	    	
+	         dobro=Integer.parseInt(a)*2;
+	         System.out.println("Dobro do numero: " +dobro+"\n");
+	     }
+	    scan.close();
+
+	}
+
+}
