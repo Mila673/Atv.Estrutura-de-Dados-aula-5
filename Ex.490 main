@@ -1,0 +1,22 @@
+import javax.swing.JOptionPane;
+
+public class Ex490 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+    	  String[] palavras = new String[10];
+
+        for (int i = 0; i < 10; i++) {
+        	System.out.println("Digite palavra em letras minusculas: " + (i + 1));
+            palavras[i] = scan.nextLine();
+        }
+
+        Remocao manipulador = new Remocao();
+        manipulador.removerCaractere(palavras, 'c');
+
+        String saida = "";
+        for (int i = 0; i < 10; i++) {
+        saida += (i + 1) + " - " + palavras[i] + "\n";
+}
+        JOptionPane.showMessageDialog(null, saida.toString());
+    }
+}
