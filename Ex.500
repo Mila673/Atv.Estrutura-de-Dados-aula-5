@@ -1,0 +1,47 @@
+import javax.swing.JOptionPane;
+
+public class Ex500 {
+	    Operacoes opvetor = new Operacoes();
+
+	    public void exibir() {
+	        int op;
+	        do {
+	            op = exibirMenu();
+	            switch (op) {
+	                case 1:
+	                    opvetor.entrada("A");
+	                    break;
+	                case 2:
+	                	opvetor.entrada("B");
+	                    break;
+	                case 3:
+	                	opvetor.imprime("A");
+	                	opvetor.imprime("B");
+	                    break;
+	                case 4:
+	                	opvetor.soma();
+	                    break;
+	                case 5:
+	                    opvetor.subtrai();
+	                    break;
+	                case 6:
+	                    System.out.println("Saindo do Algoritmo");
+	                    break;
+	                default:
+	                	System.out.println("Opcao invalida");
+	            }
+	        } while (op != 6);
+	    }
+
+	    int exibirMenu() {
+	        String message = "Escolha uma opção:\n"
+	                + "1. Dados do VETOR A\n"
+	                + "2. Dados do VETOR B\n"
+	                + "3. Imprime VETORES\n"
+	                + "4. Soma VETORES\n"
+	                + "5. Subtrai VETORES\n"
+	                + "6. Sai do programa";
+	        return Integer.parseInt(JOptionPane.showInputDialog(null, message));
+	    
+	}
+}
